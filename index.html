@@ -5,143 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unidad Educativa Provincia de Manabí</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
-        /* Reset y tipografía */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+
         body {
             font-family: 'Roboto', sans-serif;
-            background: #e0f7fa;
+            background: linear-gradient(180deg, #e0f7fa, #ffffff);
             color: #333;
-            line-height: 1.6;
         }
 
-        /* Header moderno */
         header {
             background: linear-gradient(90deg, #0288d1, #26c6da);
             color: white;
-            padding: 20px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
+
         header h1 {
             font-size: 24px;
             font-weight: 700;
         }
-        nav {
-            margin-top: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 15px;
-            font-weight: 600;
-            padding: 5px 8px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        nav a:hover {
-            background-color: rgba(255,255,255,0.3);
-        }
 
-        /* Contenedor principal */
         .container {
-            max-width: 1000px;
-            margin: 20px auto;
+            max-width: 1100px;
+            margin: 25px auto;
             padding: 0 15px;
         }
 
-        /* Secciones llamativas */
-        section {
+        .intro {
             background: white;
-            margin-bottom: 25px;
             padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
         }
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+
+        .intro p {
+            font-size: 16px;
         }
-        section h2 {
+
+        .intro strong {
             color: #0288d1;
-            font-size: 22px;
-            margin-bottom: 15px;
-            position: relative;
-        }
-        section h2::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 4px;
-            background: #26c6da;
-            border-radius: 2px;
-            margin-top: 5px;
         }
 
-        /* Tablas responsivas */
-        .table-container {
-            overflow-x: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-            min-width: 500px; /* asegura scroll en móviles */
-        }
-        table th, table td {
-            border: 1px solid #ddd;
-            padding: 10px 8px;
-            text-align: left;
-            font-size: 15px;
-        }
-        table th {
-            background: linear-gradient(90deg, #0288d1, #26c6da);
-            color: white;
-            font-weight: 700;
-        }
-        table tr:nth-child(even) {
-            background-color: #f1f9fc;
+        h2 {
+            text-align: center;
+            color: #0288d1;
+            margin-bottom: 20px;
+            font-size: 24px;
         }
 
-        /* Especialidades en tarjetas */
         .especialidades-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
         }
+
         .especialidad {
-            background: linear-gradient(135deg, #ff8a65, #ff7043);
+            background: linear-gradient(135deg, #ff7043, #ff8a65);
             color: white;
-            padding: 18px;
-            border-radius: 12px;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 10px 22px rgba(0,0,0,0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .especialidad:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
         }
+
         .especialidad h3 {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             font-size: 18px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
+
         .especialidad p {
             font-size: 14px;
             line-height: 1.5;
         }
 
-        /* Chatbot botón */
+        /* Chatbot */
         #chat-button {
             position: fixed;
             bottom: 20px;
@@ -149,206 +100,128 @@
             background: linear-gradient(135deg, #ff6f00, #ffca28);
             color: white;
             border: none;
-            padding: 14px 20px;
+            padding: 14px 22px;
             border-radius: 50px;
             font-size: 16px;
             cursor: pointer;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
             z-index: 1000;
         }
-        #chat-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+
+        #chat-container {
+            position: fixed;
+            bottom: 75px;
+            right: 20px;
+            width: 90%;
+            max-width: 380px;
+            height: 450px;
+            display: none;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 2px solid #0288d1;
         }
 
-        /* Contenedor del iframe */
-#chat-container {
-    position: fixed;
-    bottom: 90px;
-    right: 15px;
-    width: calc(100% - 30px);
-    max-width: 380px;
-    height: 70vh;
-    display: none;
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    z-index: 2000;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-}
-#chat-container iframe {
+        #chat-container iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
 
-        /* Responsive */
         @media (max-width: 600px) {
             header h1 {
                 font-size: 20px;
             }
-            nav a {
-                margin-right: 10px;
-                font-size: 14px;
-            }
-            section h2 {
-                font-size: 20px;
-            }
-            .especialidad h3 {
-                font-size: 16px;
-            }
-            .especialidad p {
-                font-size: 13px;
-            }
-            table th, table td {
-                font-size: 13px;
-                padding: 8px 6px;
+            h2 {
+                font-size: 22px;
             }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Unidad Educativa Provincia de Manabí</h1>
-        <nav>
-            <a href="#historia">Historia</a>
-            <a href="#comite">Comité de Padres</a>
-            <a href="#personal">Personal</a>
-            <a href="#especialidades">Especialidades</a>
-        </nav>
-    </header>
+<header>
+    <h1>Unidad Educativa Provincia de Manabí</h1>
+</header>
 
-    <div class="container">
+<div class="container">
 
-        <!-- Historia -->
-        <section id="historia">
-            <h2>Historia</h2>
-            <p>En la actualidad, con la reforma educativa transformada en UNIDAD EDUCATIVA FISCAL "PROVINCIA DE MANABÍ" del Cantón Puerto López, nos trasladamos a los años 70, a la parroquia Daniel López, donde un grupo de padres de familia preocupados por la educación de sus hijos gestionaron la creación de un colegio en la zona.</p>
-            <p>En 1978, mediante decreto N-a 3919, firmado por el Ministro de Educación y Cultura, General de División Fernando Dobronsky Ojeda, y el Subsecretario Dr. Eduardo Garcés, se crea el colegio, iniciando sus labores en un local temporal durante siete años. El Sr. Lic. Víctor Valdivieso Morán fue designado rector encargado, y el primer curso de Ciclo Básico inició con 59 estudiantes el 6 de junio de 1978.</p>
-            <p>Actualmente, la institución cuenta con 817 alumnos y 45 miembros de personal docente, administrativo, de consejería estudiantil (DECE) y de servicio.</p>
-            <p>El colegio ha crecido con la construcción de nuevas aulas, talleres, canchas deportivas y laboratorios especializados, incluyendo un moderno laboratorio de gastronomía.</p>
-        </section>
-
-        <!-- Comité de Padres -->
-        <section id="comite">
-            <h2>Primer Comité de Padres de Familia</h2>
-            <div class="table-container">
-                <table>
-                    <tr>
-                        <th>Cargo</th>
-                        <th>Nombre</th>
-                    </tr>
-                    <tr>
-                        <td>Presidente</td>
-                        <td>Sr. Segundo Soledispa</td>
-                    </tr>
-                    <tr>
-                        <td>Vice-Presidente</td>
-                        <td>Sr. Teodoro González</td>
-                    </tr>
-                    <tr>
-                        <td>Secretaria</td>
-                        <td>Sra. Yolanda Moya de Núñez</td>
-                    </tr>
-                    <tr>
-                        <td>Tesorero</td>
-                        <td>Sr. Bernandino González</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-
-        <!-- Personal docente inicial -->
-        <section id="personal">
-            <h2>Personal Docente y Administrativo Inicial</h2>
-            <div class="table-container">
-                <table>
-                    <tr>
-                        <th>Cargo / Función</th>
-                        <th>Nombre</th>
-                    </tr>
-                    <tr>
-                        <td>Secretaria – Profesora de Castellano</td>
-                        <td>Srta. Belkys Moreira</td>
-                    </tr>
-                    <tr>
-                        <td>Profesora de CC.NN y Actividades Prácticas</td>
-                        <td>Srta. Laura García G</td>
-                    </tr>
-                    <tr>
-                        <td>Inspectora / Profesora de Estudios Sociales</td>
-                        <td>Srta. Marlene Salazar M</td>
-                    </tr>
-                    <tr>
-                        <td>Profesor de Matemática y Educación Artística</td>
-                        <td>Sr. José Tóala R.</td>
-                    </tr>
-                    <tr>
-                        <td>Colectora</td>
-                        <td>Srta. Nila Villafuerte C.</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-
-        <!-- Especialidades -->
-        <section id="especialidades">
-            <h2>Especialidades y Descripción</h2>
-            <div class="especialidades-grid">
-                <div class="especialidad">
-                    <h3>Contabilidad y Administración</h3>
-                    <p>Forma profesionales capaces de manejar la contabilidad de empresas, gestión administrativa y planificación financiera, fomentando responsabilidad y organización.</p>
-                </div>
-
-                <div class="especialidad">
-                    <h3>Aplicaciones Informáticas</h3>
-                    <p>Desarrolla habilidades en programación, manejo de software y soluciones tecnológicas para la optimización de procesos en empresas e instituciones.</p>
-                </div>
-
-                <div class="especialidad">
-                    <h3>Información y Comercialización Turística</h3>
-                    <p>Prepara estudiantes para gestionar información turística, planificar rutas y servicios, promoviendo el turismo local y regional.</p>
-                </div>
-
-                <div class="especialidad">
-                    <h3>Comercialización y Ventas</h3>
-                    <p>Capacita en técnicas de ventas, marketing y atención al cliente, desarrollando competencias para emprender o trabajar en negocios comerciales.</p>
-                </div>
-
-                <div class="especialidad">
-                    <h3>Servicios de Cocina</h3>
-                    <p>Forma expertos en gastronomía, higiene y manejo de alimentos, capaces de innovar en la preparación de comidas y servicios de cocina profesional.</p>
-                </div>
-            </div>
-        </section>
-
+    <div class="intro">
+        <p>
+            Conoce nuestras <strong>figuras profesionales</strong>.  
+            Para más información sobre historia, personal, admisiones y otros detalles,
+            <strong>pregunta directamente a nuestro chatbot</strong> 💬
+        </p>
     </div>
 
-    <!-- Botón para abrir el chatbot -->
-    <button id="chat-button">💬 Chatbot</button>
+    <h2>Figuras Profesionales</h2>
 
-    <!-- Contenedor del chatbot -->
-    <div id="chat-container">
-        <iframe id="chatbot-frame" src=""></iframe>
+    <div class="especialidades-grid">
+
+        <div class="especialidad">
+            <h3>Contabilidad y Administración</h3>
+            <p>
+                Forma estudiantes capaces de llevar registros contables,
+                apoyar la gestión administrativa y participar en la organización
+                financiera de empresas e instituciones.
+            </p>
+        </div>
+
+        <div class="especialidad">
+            <h3>Aplicaciones Informáticas</h3>
+            <p>
+                Desarrolla competencias en el uso de software, herramientas digitales
+                y soluciones tecnológicas aplicadas a distintos entornos laborales.
+            </p>
+        </div>
+
+        <div class="especialidad">
+            <h3>Información y Comercialización Turística</h3>
+            <p>
+                Prepara a los estudiantes para brindar información turística,
+                promover destinos y apoyar la actividad turística local y nacional.
+            </p>
+        </div>
+
+        <div class="especialidad">
+            <h3>Comercialización y Ventas</h3>
+            <p>
+                Capacita en técnicas de ventas, atención al cliente y estrategias
+                comerciales para el emprendimiento y el mercado laboral.
+            </p>
+        </div>
+
+        <div class="especialidad">
+            <h3>Servicios de Cocina</h3>
+            <p>
+                Forma profesionales en gastronomía, manejo higiénico de alimentos
+                y preparación culinaria con enfoque práctico y creativo.
+            </p>
+        </div>
+
     </div>
+</div>
 
-    <script>
-        const btn = document.getElementById("chat-button");
-        const chatContainer = document.getElementById("chat-container");
-        const iframe = document.getElementById("chatbot-frame");
+<button id="chat-button">💬 Chatbot</button>
 
-        btn.addEventListener("click", () => {
-            if (chatContainer.style.display === "none" || chatContainer.style.display === "") {
-                iframe.src = "https://www.stack-ai.com/chat/6961198f7e7ed73509366103-4RJrW5Mx5nMQ9rA5bNZO60";
-                chatContainer.style.display = "block";
-            } else {
-                chatContainer.style.display = "none";
-            }
-        });
-    </script>
+<div id="chat-container">
+    <iframe id="chatbot-frame"></iframe>
+</div>
+
+<script>
+    const btn = document.getElementById("chat-button");
+    const chatContainer = document.getElementById("chat-container");
+    const iframe = document.getElementById("chatbot-frame");
+
+    btn.addEventListener("click", () => {
+        if (chatContainer.style.display === "none" || chatContainer.style.display === "") {
+            iframe.src = "https://www.stack-ai.com/chat/6961198f7e7ed73509366103-4RJrW5Mx5nMQ9rA5bNZO60";
+            chatContainer.style.display = "block";
+        } else {
+            chatContainer.style.display = "none";
+        }
+    });
+</script>
 
 </body>
 </html>
-
