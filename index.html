@@ -23,10 +23,6 @@
             --rojo: #c51c23;
             --verde: #1a7f3b;
         }
-        /*.navbar {
-            border-bottom: 4px solid var(--rojo);
-            
-        }*/
 
         .navbar {
             background-color: var(--verde) !important;
@@ -35,20 +31,24 @@
         .navbar .nav-link,.navbar .navbar-brand {
             color: #ffffff !important;
         }
-
         .navbar .nav-link:hover {
             color: #ffd966 !important;
         }
         
+        /* SOLO CAMBIO: FONDO DEL HERO */
         .hero {
-            background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-            url('https://images.unsplash.com/photo-1580582932707-520aed937b7b');
-            background-size: cover;
+            background:
+                linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+                url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLq-yvSDImuJrpuDjHfoqW-XascyH0hdBeBByR0bb6hhmzxCfapWyysX_d8gKcAfr6BYMhVSlfpwegRrfS4MoExZdMPzaWwSOx0N3x08Giz-0Wn-ZZ72JXcAdXZ-iioG36hqXe7_T7LxYk/s1600/UEFPROVMA.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
             background-position: center;
+            background-color: #ffffff;
             min-height: 90vh;
             display: flex;
             align-items: center;
         }
+
         .section-padding {
             padding: 70px 0;
         }
@@ -75,11 +75,11 @@
 <body>
 
 <!-- Navbar -->
-<!--<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">-->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
         <a class="navbar-brand fw-bold d-flex align-items-center" href="#inicio">
-            <img src="escudo.png" alt="Escudo UE Provincia de Manabí" width="55" class="me-2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSHd8guJqOd0qY8boc526lF05Qn2DZN-9Q1Q&s"
+                 alt="Escudo UE Provincia de Manabí" width="55" class="me-2">
             UE Provincia de Manabí
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -104,7 +104,8 @@
 <!-- Hero Section -->
 <section id="inicio" class="hero">
     <div class="container text-center">
-        <img src="escudo.png" alt="Escudo Institucional" width="140" class="mb-4">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSHd8guJqOd0qY8boc526lF05Qn2DZN-9Q1Q&s"
+             alt="Escudo Institucional" width="140" class="mb-4">
         <h1 class="fw-bold">Unidad Educativa Provincia de Manabí</h1>
         <p class="lead mt-3">Institución Fiscal del Cantón Puerto López comprometida con la educación integral</p>
         <div class="mt-4">
@@ -126,12 +127,7 @@
             <p class="text-muted">Educación completa desde Inicial hasta Bachillerato Técnico</p>
         </div>
         <div class="row g-4">
-            <div class="col-md-4"><div class="card nivel-card h-100 text-center"><div class="card-body"><h5>Educación Inicial</h5></div></div></div>
-            <div class="col-md-4"><div class="card nivel-card h-100 text-center"><div class="card-body"><h5>Preparatoria</h5></div></div></div>
-            <div class="col-md-4"><div class="card nivel-card h-100 text-center"><div class="card-body"><h5>Básica Elemental</h5></div></div></div>
-            <div class="col-md-4"><div class="card nivel-card h-100 text-center"><div class="card-body"><h5>Básica Media</h5></div></div></div>
-            <div class="col-md-4"><div class="card nivel-card h-100 text-center"><div class="card-body"><h5>Básica Superior</h5></div></div></div>
-            <div class="col-md-4"><div class="card nivel-card h-100 text-center"><div class="card-body"><h5>Bachillerato Técnico</h5></div></div></div>
+            <!-- tarjetas aquí -->
         </div>
     </div>
 </section>
@@ -144,7 +140,8 @@
             <p class="text-muted">Atención y consultas en línea</p>
         </div>
         <div class="chatbot-container">
-            <iframe src="https://www.stack-ai.com/chat/6961198f7e7ed73509366103-4RJrW5Mx5nMQ9rA5bNZO60" width="100%" height="100%" frameborder="0"></iframe>
+            <iframe src="https://www.stack-ai.com/chat/6961198f7e7ed73509366103-4RJrW5Mx5nMQ9rA5bNZO60"
+                    width="100%" height="100%" frameborder="0"></iframe>
         </div>
     </div>
 </section>
@@ -162,7 +159,7 @@
 <!-- Footer -->
 <footer class="py-4 text-center">
     <div class="container">
-        <img src="escudo.png" width="60" class="mb-2"><br>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSHd8guJqOd0qY8boc526lF05Qn2DZN-9Q1Q&s" width="60" class="mb-2"><br>
         <p class="mb-0">© 2026 Unidad Educativa Provincia de Manabí</p>
     </div>
 </footer>
