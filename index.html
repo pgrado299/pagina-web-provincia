@@ -31,19 +31,18 @@
         .navbar .nav-link,.navbar .navbar-brand {
             color: #ffffff !important;
         }
+
         .navbar .nav-link:hover {
             color: #ffd966 !important;
         }
         
-        /* SOLO CAMBIO: FONDO DEL HERO */
+        /* FONDO IMPLEMENTADO (SIN CAMBIAR NADA MÁS) */
         .hero {
             background:
                 linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-                url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLq-yvSDImuJrpuDjHfoqW-XascyH0hdBeBByR0bb6hhmzxCfapWyysX_d8gKcAfr6BYMhVSlfpwegRrfS4MoExZdMPzaWwSOx0N3x08Giz-0Wn-ZZ72JXcAdXZ-iioG36hqXe7_T7LxYk/s1600/UEFPROVMA.jpg');
-            background-size: contain;
-            background-repeat: no-repeat;
+                url('https://scontent.fuio15-1.fna.fbcdn.net/v/t39.30808-6/469284267_563178696428187_8390293463790040702_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=msTrVAnIJk0Q7kNvwFsDrBL&_nc_oc=AdliYpdE-rbdw4mX4i1VXqAaXuZaj6q_DdvKqgvbqKLp_ZPgvLDTDXUhXjgZp9uFtOA&_nc_zt=23&_nc_ht=scontent.fuio15-1.fna&_nc_gid=4hJiyOV5xbc_HT3pXgX0IQ&oh=00_AfrF7CceCWVbl4n7Dqrw1m6K6a0Fvz6CtGhFBq3X0QT2VQ&oe=69794DCF');
+            background-size: cover;
             background-position: center;
-            background-color: #ffffff;
             min-height: 90vh;
             display: flex;
             align-items: center;
@@ -127,7 +126,12 @@
             <p class="text-muted">Educación completa desde Inicial hasta Bachillerato Técnico</p>
         </div>
         <div class="row g-4">
-            <!-- tarjetas aquí -->
+            <div class="col-md-4"><div class="card nivel-card h-100 text-center"><div class="card-body"><h5>Educación Inicial</h5></div></div></div>
+            <div class="col-md-4"><div class="card nivel-card h-100 text-center"><div class="card-body"><h5>Preparatoria</h5></div></div></div>
+            <div class="col-md-4"><div class="card nivel-card h-100 text-center"><div class="card-body"><h5>Básica Elemental</h5></div></div></div>
+            <div class="col-md-4"><div class="card nivel-card h-100 text-center"><div class="card-body"><h5>Básica Media</h5></div></div></div>
+            <div class="col-md-4"><div class="card nivel-card h-100 text-center"><div class="card-body"><h5>Básica Superior</h5></div></div></div>
+            <div class="col-md-4"><div class="card nivel-card h-100 text-center"><div class="card-body"><h5>Bachillerato Técnico</h5></div></div></div>
         </div>
     </div>
 </section>
@@ -140,8 +144,7 @@
             <p class="text-muted">Atención y consultas en línea</p>
         </div>
         <div class="chatbot-container">
-            <iframe src="https://www.stack-ai.com/chat/6961198f7e7ed73509366103-4RJrW5Mx5nMQ9rA5bNZO60"
-                    width="100%" height="100%" frameborder="0"></iframe>
+            <iframe src="https://www.stack-ai.com/chat/6961198f7e7ed73509366103-4RJrW5Mx5nMQ9rA5bNZO60" width="100%" height="100%" frameborder="0"></iframe>
         </div>
     </div>
 </section>
@@ -164,7 +167,6 @@
     </div>
 </footer>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
